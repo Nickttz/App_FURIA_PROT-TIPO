@@ -1,0 +1,75 @@
+body {
+    background-color: #131313;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff;
+    height: 100vh;
+    margin: 0;
+}
+
+.main-background {
+    position: relative;
+    height: 100vh;
+    width: 33vw;
+    margin-left: 34%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.furia-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.furia-nome {
+    position: absolute;
+    height: 10rem;
+    width: 20rem;
+    margin-bottom: 55vh;
+}
+
+.header-main {
+    position: absolute;
+    margin-top: 90vh;
+    margin-left: 160px;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    color: rgb(126, 126, 126);
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    align-self: center;
+}
+
+.x-logo {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    align-self: center;
+    top: 80vh
+}
+
+.input-container {
+    margin-top: 40vh;
+    font-size: xx-large;
+}
+
+.button-perfil {
+    font-size: larger;
+    margin-top: 20px;
+}
+
+.sobre-button-container {
+    position: absolute;
+    display: flex;
+    top: 5vh;
+    left: 25vw;
+    font-size: large;
+}
+

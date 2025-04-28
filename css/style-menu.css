@@ -1,0 +1,97 @@
+body {
+    background-color: #131313;
+    font-family: 'Bebas Neue', sans-serif;
+    color: #fff;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.circle-container {
+    width: 150px;
+    height: 150px;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(#8000ff 0% 0%, #333 0% 100%);
+    box-shadow: 0 0 15px #8000ff88, inset 0 0 10px #8000ff44;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.circle:hover {
+    transform: scale(1.05);
+}
+
+.circle::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(19, 19, 19, 0.9);
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+    z-index: 0;
+}
+
+.percentage-text {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: bold;
+    z-index: 1;
+    position: relative;
+    text-shadow: 0 0 10px #ffffffaa;
+}
+
+.percentage-text span {
+    display: block;
+    font-size: 1rem;
+    color: #ccc;
+    font-weight: normal;
+    text-shadow: none;
+}
+
+.recommendation-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.recommendation-card:hover {
+    background-color: #2a2a2a;
+    transform: scale(1.05);
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.container-content {
+    background-color: #0f0f0f;
+    height: 100%;
+    width: 30vw;
+    overflow-y: auto;
+}

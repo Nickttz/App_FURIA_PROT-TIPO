@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Know Your Fan - Análise</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style-menu.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container d-flex flex-column align-items-center pt-5 container-content">
+
+    <!-- Perfil -->
+    <div>
+      <div class="row align-items-center gap-2">
+        <div class="col-auto">
+          <img src="" alt="Foto do usuário" class="rounded-circle profile-img" id="profile-photo">
+        </div>
+        <div class="col">
+          <p class="fw-bold mb-0 display-1 fs-1" id="profile-name">Nome</p>
+          <p class="text-muted fs-5" id="profile-username">@usuario</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tipo de fã -->
+    <div class="text-center mt-4">
+      <p class="text-muted fs-3 mb-1">Tipo de fã:</p>
+      <h3 class="fw-bold display-1" id="fan-type">Tipo</h3>
+    </div>
+
+    <!-- Indicador circular -->
+    <div class="circle-container my-4 d-flex justify-content-center">
+      <div class="circle d-flex align-items-center justify-content-center">
+        <div class="percentage-text" id="main-percentage">
+          0%<br><span>Positivo</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gráfico de pizza -->
+    <div class="my-5 w-100 px-3">
+      <h4 class="fw-bold mb-4 text-center fs-1">Análise dos Tweets</h4>
+      <canvas id="pieChart" height="200"></canvas>
+    </div>
+
+    <!-- Recomendações -->
+    <div class="w-100 mt-4 px-3">
+      <h4 class="fw-bold mb-3 fs-1">Recomendações</h4>
+
+       <!-- Último Clutch (Vídeo) -->
+      <div class="recommendation-card d-flex align-items-center mb-3 p-3 rounded" onclick="window.open('https://www.youtube.com/@FURIAgg', '_blank')" style="cursor: pointer;">
+        <img src="../data/video-icon.png" class="icon me-3" alt="Ícone vídeo">
+        <div>
+          <strong>Último Clutch</strong><br>
+          <small class="text-muted">Assista ao destaque da FURIA</small>
+        </div>
+      </div>
+
+      <!-- Camisa Oficial -->
+      <div class="recommendation-card d-flex align-items-center mb-3 p-3 rounded" onclick="window.location.href='https://www.furia.gg/produtos/vestuario/camisetas?gad_source=1&gclid=EAIaIQobChMIt_qg7of7jAMVpipECB0Vlg13EAAYASAAEgIGR_D_BwE'" style="cursor:pointer;">
+        <img src="../data/camisa-icon.png" class="icon me-3" alt="Ícone camisa">
+        <div>
+          <strong>Camisa Oficial</strong><br>
+          <small class="text-muted">Desconto de 23% na loja</small>
+        </div>
+      </div>
+
+      <!-- Evento ao vivo -->
+      <div class="recommendation-card d-flex align-items-center mb-3 p-3 rounded" onclick="window.open('https://www.twitch.tv/furiatv', '_blank')" style="cursor: pointer;">
+        <img src="../data/agenda-icon.png" class="icon me-3" alt="Ícone evento">
+        <div>
+          <strong>Evento ao vivo</strong><br>
+          <small class="text-muted">Assista no canal da FURIA</small>
+        </div>
+      </div>
+
+      <!-- Twitter Oficial -->
+      <div class="recommendation-card d-flex align-items-center mb-3 p-3 rounded" onclick="window.open('https://twitter.com/FURIA', '_blank')" style="cursor: pointer;">
+        <img src="../data/logo-x.png" class="icon me-3" alt="Ícone Twitter">
+        <div>
+          <strong>Rede Oficial</strong><br>
+          <small class="text-muted">@FURIA — Últimas novidades</small>
+        </div>
+      </div>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>
