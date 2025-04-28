@@ -47,7 +47,7 @@ class AnalyzeRequest(BaseModel):
 class AnalyzeResponse(BaseModel):
     furia_percent: float
     games: list[GameAnalysis]
-    profile_photo: str  # Adicionando o campo para a URL da foto do perfil
+    profile_photo: str  
 
 @app.post("/analyze", response_model=AnalyzeResponse)
 async def analyze_user(data: AnalyzeRequest):
@@ -112,7 +112,7 @@ async def analyze_user(data: AnalyzeRequest):
     return AnalyzeResponse(
         furia_percent=round(furia_percent, 2),
         games=games_list,
-        profile_photo="/data/user_photo.png"  # A URL da foto do perfil
+        profile_photo="data/user_photo.png"  # A URL da foto do perfil
     )
 
 # DADOS DE TESTE PARA SIMULAR ANÁLISE 
@@ -140,5 +140,5 @@ data = [
 ]
 
 df = pd.DataFrame(data)
-df["profile_photo"] = "/data/user_photo.png"  # A URL da foto do perfil
+df["profile_photo"] = "data/user_photo.png"  # A URL da foto do perfil
 df.to_feather("ana_gamer_tweets.feather")
